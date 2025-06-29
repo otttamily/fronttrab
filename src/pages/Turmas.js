@@ -35,31 +35,19 @@ function Turmas() {
           <span>ADMINISTRADOR</span>
         </div>
         <nav className="menu">
-          <MenuDropdown
-            title="TURMAS"
-            options={[
-              { label: 'Listar Turmas', onClick: () => navigate('/turmas') },
-              { label: 'Criar nova Turma', onClick: () => navigate('/turmas/criar') },
-            ]}
-          />
-          <MenuDropdown
-            title="ALUNOS"
-            options={[
-              { label: 'Listar Alunos', onClick: () => console.log('Listar Alunos') },
-              { label: 'Cadastrar Aluno', onClick: () => console.log('Cadastrar') },
-            ]}
-          />
-          <MenuDropdown
-            title="CHAMADA"
-            options={[
-              { label: 'Fazer Chamada', onClick: () => console.log('Chamada') },
-            ]}
-          />
+          <MenuDropdown title="TURMAS" options={[]} />
+          <MenuDropdown title="ALUNOS" options={[]} />
+          <MenuDropdown title="CHAMADA" options={[]} />
         </nav>
       </aside>
 
       <main className="main-content">
+        <div className="titulo-box">
+        <button className="btn-seta-voltar" onClick={() => navigate('/dashboard')}>
+            ←
+        </button>
         <h2 className="titulo-pagina">TURMAS CADASTRADAS</h2>
+        </div>
 
         <div className="turmas-grid">
           {turmas.map((turma) => (

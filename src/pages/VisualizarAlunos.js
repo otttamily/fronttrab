@@ -34,7 +34,13 @@ function VisualizarAlunos() {
       </aside>
 
       <main className="main-content">
+        <div className="titulo-box">
+        <button className="btn-seta-voltar" onClick={() => navigate('/dashboard')}>
+            ←
+        </button>
         <h2 className="titulo">VER ALUNOS</h2>
+        </div>
+
 
         <table className="tabela-alunos">
           <thead>

@@ -70,3 +70,22 @@ input {
   border-radius: 6px;
   cursor: pointer;
 }
+.titulo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-seta-voltar {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #1b2351;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-seta-voltar:hover {
+  color: #32407a;
+}

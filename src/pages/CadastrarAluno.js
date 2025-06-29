@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import '../style/CadastrarAluno.css';
 import MenuDropdown from '../components/MenuDropdown';
+import { useNavigate } from 'react-router-dom';
 
 function CadastrarAluno() {
-    
+    const navigate = useNavigate();
+
   const [form, setForm] = useState({
     nome: '',
     mae: '',
@@ -42,9 +44,17 @@ function CadastrarAluno() {
 
         
       </aside>
+        
+
 
       <main className="main-content">
+        <div className="titulo-box">
+        <button className="btn-seta-voltar" onClick={() => navigate('/dashboard')}>
+            ←
+        </button>
         <h2 className="titulo">CADASTRAR NOVO ALUNO</h2>
+        </div>
+
         <form className="form-aluno" onSubmit={handleSubmit}>
           <div className="grid-dados">
             <input name="nome" value={form.nome} onChange={handleChange} placeholder="Nome do Aluno" />

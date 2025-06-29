@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import '../style/Chamada.css';
 import MenuDropdown from '../components/MenuDropdown';
+import { useNavigate } from 'react-router-dom';
 
 function Chamada() {
+    const navigate = useNavigate();
   const [presencas, setPresencas] = useState({});
 
   const alunos = [
@@ -32,8 +34,13 @@ function Chamada() {
 
       <main className="main-content">
         <div className="chamada-topo">
-          <h2 className="titulo">CHAMADA - Turma X</h2>
-          <button className="btn-importar">Importar Chamada</button>
+        <div className="titulo-box">
+            <button className="btn-seta-voltar" onClick={() => navigate('/dashboard')}>
+            ←
+            </button>
+            <h2 className="titulo">CHAMADA - Turma X</h2>
+        </div>
+        <button className="btn-importar">Importar Chamada</button>
         </div>
 
         <table className="tabela-chamada">

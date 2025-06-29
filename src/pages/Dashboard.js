@@ -50,19 +50,35 @@ function Dashboard() {
           <h2>INÍCIO</h2>
         </header>
         <section className="quick-access">
-        <div className="icon-card">
-            <img src={turmasIcon} alt="Turmas" className="icon-img" />
-            TURMAS
-        </div>
-        <div className="icon-card">
-            <img src={alunosIcon} alt="Alunos" className="icon-img" />
-            ALUNOS
-        </div>
-        <div className="icon-card">
-            <img src={chamadaIcon} alt="Chamada" className="icon-img" />
-            CHAMADA
-        </div>
-        </section>
+  <div
+    className="icon-card"
+    onClick={() => navigate('/turmas')}
+    style={{ cursor: 'pointer' }}
+  >
+    <img src={turmasIcon} alt="Turmas" className="icon-img" />
+    TURMAS
+  </div>
+
+  <div
+    className="icon-card"
+    onClick={() => navigate('/alunos')}
+    style={{ cursor: 'pointer' }}
+  >
+    <img src={alunosIcon} alt="Alunos" className="icon-img" />
+    ALUNOS
+  </div>
+  
+
+  <div
+    className="icon-card"
+    onClick={() => navigate('/chamada')}
+    style={{ cursor: 'pointer' }}
+  >
+    <img src={chamadaIcon} alt="Chamada" className="icon-img" />
+    CHAMADA
+  </div>
+</section>
+
 
       </main>
     </div>

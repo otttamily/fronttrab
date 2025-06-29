@@ -1,8 +1,12 @@
 import React from 'react';
 import '../style/VisualizarAlunoIndividual.css';
 import MenuDropdown from '../components/MenuDropdown';
+import { useNavigate } from 'react-router-dom';
+
 
 function VisualizarAlunoIndividual() {
+    const navigate = useNavigate();
+
   const aluno = {
     nome: 'Fulano de Tal',
     nascimento: '2008-03-10',
@@ -35,7 +39,13 @@ function VisualizarAlunoIndividual() {
       </aside>
 
       <main className="main-content">
-        <h2 className="titulo">DADOS DO ALUNO</h2>
+        <div className="titulo-box">
+  <button className="btn-seta-voltar" onClick={() => navigate('/alunos')}>
+    ←
+  </button>
+  <h2 className="titulo">DADOS DO ALUNO</h2>
+</div>
+
 
         <div className="form-box">
           <div className="linha">

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import '../style/NovaTurma.css';
 import MenuDropdown from '../components/MenuDropdown';
+import { useNavigate } from 'react-router-dom';
+
 
 function NovaTurma() {
+  const navigate = useNavigate();
   const [aluno, setAluno] = useState('');
   const [alunosSelecionados, setAlunosSelecionados] = useState([]);
 
@@ -28,7 +31,13 @@ function NovaTurma() {
       </aside>
 
       <main className="main-content">
+        <div className="titulo-box">
+        <button className="btn-seta-voltar" onClick={() => navigate('/dashboard')}>
+          ←
+        </button>
         <h2 className="titulo">CRIAR NOVA TURMA</h2>
+        </div>
+
 
         <div className="formulario-turma">
           <div className="campo">

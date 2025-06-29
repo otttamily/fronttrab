@@ -9,8 +9,6 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Exemplo: comparação com localStorage ou simulação de login
-    // Aqui você pode integrar com seu backend futuramente
     if (nome === 'admin@teste.com' && senha === '123') {
       navigate('/dashboard');
     } else {
