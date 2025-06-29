@@ -1,0 +1,77 @@
+/* Layout geral */
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b2351;
+  margin-bottom: 32px;
+}
+
+.form-aluno {
+  max-width: 900px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Grid dos dados principais */
+.grid-dados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Campos de entrada */
+input, textarea, select {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #1b2351;
+  outline: none;
+}
+
+/* Textareas */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Sessão de anamnese */
+.form-aluno h3 {
+  color: #1b2351;
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+/* Botões */
+.btn-finalizar {
+  margin-top: 10px;
+  background-color: #1b2351;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-finalizar:hover {
+  background-color: #2d3a73;
+}
+
+/* Upload do atestado */
+input[type="file"] {
+  background-color: #f9f9f9;
+  border-style: dashed;
+  padding: 12px;
+  cursor: pointer;
+}

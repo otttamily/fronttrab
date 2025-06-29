@@ -1,0 +1,52 @@
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b2351;
+  margin-bottom: 24px;
+}
+
+.tabela-alunos {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabela-alunos th {
+  background-color: #1b2351;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tabela-alunos td {
+  padding: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.btn-trash {
+  background: none;
+  border: none;
+  color: #d93025;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-trash:hover {
+  color: #a31010;
+}
+
+.aluno-nome {
+  cursor: pointer;
+  color: #1b2351;
+  font-weight: 500;
+}
+
+.aluno-nome:hover {
+  text-decoration: underline;
+}

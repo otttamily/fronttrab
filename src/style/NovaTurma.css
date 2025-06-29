@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #1b2351;
+  --light-bg: #f6f6f6;
+  --text-light: #ffffff;
+  --text-muted: #bbb;
+  --hover-bg: #e0e4ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--light-bg);
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 20px;
+  text-align: start;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.logo h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.logo span {
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+.menu button {
+  background: var(--text-light);
+  color: var(--primary-color);
+  margin: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: start;
+}
+
+.menu button:hover {
+  background-color: var(--hover-bg);
+
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+/* TOPBAR */
+.topbar {
+  background: var(--text-light);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.turmas-page {
+  padding: 40px;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+
+.titulo-pagina {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b2351;
+  margin-bottom: 24px;
+}
+
+.turmas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-turma {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cabecalho-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cabecalho-card h3 {
+  font-size: 18px;
+  color: #1b2351;
+  margin: 0;
+}
+
+.conteudo-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
