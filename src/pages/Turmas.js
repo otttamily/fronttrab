@@ -55,12 +55,19 @@ function Turmas() {
               <div className="cabecalho-card">
                 <h3>{turma.nome}</h3>
                 <MenuDropdown
-                  title=""
-                  options={[
-                    
-                    { label: 'Excluir Turma', onClick: () => console.log('Excluir', turma.nome) },
-                  ]}
-                />
+  title=""
+  options={[
+    {
+      label: 'Ver Turma',
+      onClick: () => navigate(`/turmas/${turma.id}`)
+    },
+    {
+      label: 'Excluir Turma',
+      onClick: () => console.log('Excluir', turma.nome)
+    }
+  ]}
+/>
+
               </div>
 
               <div className="conteudo-card">
@@ -69,6 +76,7 @@ function Turmas() {
                 <p><strong>Dias:</strong> {turma.dias}</p>
                 <p><strong>Professor:</strong> {turma.professor}</p>
                 <p><strong>Alunos:</strong> {turma.alunos}</p>
+
               </div>
             </div>
           ))}

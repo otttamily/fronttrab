@@ -8,6 +8,8 @@ import CadastrarAluno from './pages/CadastrarAluno';
 import VisualizarAlunos from './pages/VisualizarAlunos';
 import VisualizarAlunoIndividual from './pages/VisualizarAlunoIndividual';
 import Chamada from './pages/Chamada';
+import VisualizarTurma from './pages/VisualizarTurma';
+import Pagamentos from './pages/Pagamentos';
 
 import './App.css';
 
@@ -24,6 +26,9 @@ function App() {
         <Route path="/alunos" element={<VisualizarAlunos />} />
         <Route path="/alunos/:id" element={<VisualizarAlunoIndividual />} />
         <Route path="/chamada" element={<Chamada />} />
+        <Route path="/turmas/:id" element={<VisualizarTurma />} />
+        <Route path="/pagamentos" element={<Pagamentos />} />
+        <Route path="/pagamentos" element={<Pagamentos />} />
       </Routes>
     </Router>
   );

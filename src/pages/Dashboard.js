@@ -5,6 +5,7 @@ import alunosIcon from '../assets/user.png';
 import chamadaIcon from '../assets/lista-de-controle (1).png';
 import MenuDropdown from '../components/MenuDropdown';
 import { useNavigate } from 'react-router-dom';
+import pagamentosIcon from '../assets/economizar.png';
 
 
 function Dashboard() {
@@ -57,6 +58,15 @@ function Dashboard() {
   >
     <img src={turmasIcon} alt="Turmas" className="icon-img" />
     TURMAS
+  </div>
+
+    <div
+    className="icon-card"
+    onClick={() => navigate('/pagamentos')}
+    style={{ cursor: 'pointer' }}
+  >
+    <img src={pagamentosIcon} alt="Pagamentos" className="icon-img" />
+    PAGAMENTOS
   </div>
 
   <div

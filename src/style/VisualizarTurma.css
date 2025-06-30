@@ -1,0 +1,85 @@
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b2351;
+}
+
+.titulo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-seta-voltar {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #1b2351;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-seta-voltar:hover {
+  color: #32407a;
+}
+
+.detalhes-turma {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+.detalhes-turma p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.alunos-box {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aluno-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f8fc;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.aluno-item button {
+  background: transparent;
+  border: none;
+  color: #d13b3b;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.adicionar-aluno {
+  display: flex;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.adicionar-aluno input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.adicionar-aluno button {
+  background-color: #1b2351;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,93 @@
+.titulo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b2351;
+}
+
+.titulo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-seta-voltar {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #1b2351;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-seta-voltar:hover {
+  color: #32407a;
+}
+
+.tabela-pagamentos {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.07);
+}
+
+.tabela-pagamentos th {
+  background-color: #1b2351;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.tabela-pagamentos td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.status-pago {
+  color: #13c47f;
+  font-weight: bold;
+}
+
+.status-pendente {
+  color: #e53935;
+  font-weight: bold;
+}
+.novo-pagamento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.novo-pagamento input,
+.novo-pagamento select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.novo-pagamento .btn {
+  background-color: #1b2351;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.importar-csv {
+  margin-bottom: 12px;
+}
+
+.importar-csv .btn {
+  background-color: #2a3270;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}

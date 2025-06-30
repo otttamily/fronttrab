@@ -5,6 +5,29 @@ import { useNavigate } from 'react-router-dom';
 
 
 function VisualizarAlunoIndividual() {
+    const handleExtratoCSV = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    const texto = event.target.result;
+    const linhas = texto.split('\n').map(l => l.trim()).filter(Boolean);
+
+    const extratos = linhas.map((linha, i) => {
+      const [data, valor, status] = linha.split(',');
+      return { data, valor, status };
+    });
+
+    console.log('Extratos CSV:', extratos);
+    alert('Extrato financeiro importado com sucesso!');
+    
+  };
+
+  reader.readAsText(file);
+};
+
     const navigate = useNavigate();
 
   const aluno = {
@@ -68,7 +91,15 @@ function VisualizarAlunoIndividual() {
         <h3 className="subtitulo">Extrato Financeiro</h3>
         <div className="form-box finance-box">
           <input disabled value="Data de Pagamento em Aberto: 24/06/2025" />
-          <button className="btn">Anexar Extrato</button>
+          <label htmlFor="extratoCSV" className="btn">Anexar Extrato</label>
+<input
+  id="extratoCSV"
+  type="file"
+  accept=".csv"
+  style={{ display: 'none' }}
+  onChange={handleExtratoCSV}
+/>
+
           <div className="responsavel">Responsável financeiro: Fulano de Não Sei das Quantas</div>
         </div>
 

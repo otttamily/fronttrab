@@ -4,6 +4,31 @@ import MenuDropdown from '../components/MenuDropdown';
 import { useNavigate } from 'react-router-dom';
 
 function Chamada() {
+    const handleImportarCSV = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    const texto = event.target.result;
+    const linhas = texto.split('\n');
+
+    const novasPresencas = {};
+
+    linhas.forEach((linha) => {
+      const [idStr, status] = linha.trim().split(',');
+      const id = parseInt(idStr);
+      if (id && (status === 'presente' || status === 'falta')) {
+        novasPresencas[id] = status;
+      }
+    });
+
+    setPresencas(novasPresencas);
+  };
+
+  reader.readAsText(file);
+};
+
     const navigate = useNavigate();
   const [presencas, setPresencas] = useState({});
 
@@ -40,7 +65,17 @@ function Chamada() {
             </button>
             <h2 className="titulo">CHAMADA - Turma X</h2>
         </div>
-        <button className="btn-importar">Importar Chamada</button>
+        <label htmlFor="csvUpload" className="btn-importar">
+  Importar Chamada
+</label>
+<input
+  id="csvUpload"
+  type="file"
+  accept=".csv"
+  style={{ display: 'none' }}
+  onChange={handleImportarCSV}
+/>
+
         </div>
 
         <table className="tabela-chamada">
